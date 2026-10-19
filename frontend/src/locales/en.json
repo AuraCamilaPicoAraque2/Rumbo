@@ -1,0 +1,94 @@
+{
+  "brand": "Rumbo",
+  "nav": {
+    "menuLabel": "Main navigation",
+    "home": "Home",
+    "blog": "Blog",
+    "login": "Log in",
+    "register": "Sign up",
+    "logout": "Log out",
+    "theme": "Switch between light and dark theme",
+    "language": "Change language"
+  },
+  "hex": {
+    "alt": "Map of the six vocational interest types with you at the center",
+    "center": "You",
+    "R": "Realistic",
+    "I": "Investigative",
+    "A": "Artistic",
+    "S": "Social",
+    "E": "Enterprising",
+    "C": "Conventional"
+  },
+  "home": {
+    "title": "Choose what to study with more clarity",
+    "subtitle": "Articles about careers, universities and scholarships to help you decide your path after school.",
+    "ctaBlog": "Read the blog",
+    "ctaRegister": "Sign up",
+    "latest": "Latest articles",
+    "viewAll": "See all articles",
+    "categories": "Explore by topic",
+    "emptyTitle": "No articles published yet",
+    "emptyText": "Once the administrator publishes the first one, it will show up here.",
+    "joinTitle": "Create an account to comment",
+    "joinText": "With an account you can join the conversation on articles and get your questions answered by other students."
+  },
+  "blog": {
+    "title": "Guidance blog",
+    "searchLabel": "Search articles",
+    "searchPlaceholder": "Search by title or topic",
+    "search": "Search",
+    "all": "All",
+    "results_one": "{{count}} article",
+    "results_other": "{{count}} articles",
+    "emptyTitle": "No articles found",
+    "emptyText": "Try another word or remove the topic filter.",
+    "clear": "Clear filters",
+    "prev": "Previous",
+    "next": "Next",
+    "page": "Page {{page}} of {{totalPages}}"
+  },
+  "article": {
+    "back": "Back to the blog",
+    "by": "By {{name}}",
+    "comments": "Comments",
+    "noComments": "No comments yet. Write the first one.",
+    "commentLabel": "Your comment",
+    "commentPlaceholder": "Share your opinion or your question",
+    "publish": "Post comment",
+    "publishing": "Posting…",
+    "delete": "Delete",
+    "loginToComment": "Log in to comment.",
+    "commentError": "The comment could not be posted.",
+    "notFoundTitle": "This article does not exist",
+    "notFoundText": "It may have been deleted, or the link may be misspelled."
+  },
+  "auth": {
+    "loginTitle": "Log in",
+    "registerTitle": "Create your account",
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "passwordHint": "At least 8 characters",
+    "submitLogin": "Log in",
+    "submitRegister": "Sign up",
+    "sending": "Sending…",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?",
+    "errorLogin": "Could not log in. Please try again.",
+    "errorRegister": "Could not create the account. Please try again."
+  },
+  "notFound": {
+    "title": "This page does not exist",
+    "text": "Check the address or go back to the home page.",
+    "home": "Back to home"
+  },
+  "common": {
+    "loading": "Loading…",
+    "error": "The information could not be loaded. Check that the server is running and try again.",
+    "retry": "Try again"
+  },
+  "footer": {
+    "text": "Academic project about university guidance."
+  }
+}

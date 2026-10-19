@@ -1,0 +1,94 @@
+{
+  "brand": "Rumbo",
+  "nav": {
+    "menuLabel": "Navegación principal",
+    "home": "Inicio",
+    "blog": "Blog",
+    "login": "Iniciar sesión",
+    "register": "Crear cuenta",
+    "logout": "Cerrar sesión",
+    "theme": "Cambiar entre tema claro y oscuro",
+    "language": "Cambiar idioma"
+  },
+  "hex": {
+    "alt": "Mapa de los seis tipos de interés vocacional con tú en el centro",
+    "center": "Tú",
+    "R": "Realista",
+    "I": "Investigador",
+    "A": "Artístico",
+    "S": "Social",
+    "E": "Emprendedor",
+    "C": "Convencional"
+  },
+  "home": {
+    "title": "Elige qué estudiar con más claridad",
+    "subtitle": "Artículos sobre carreras, universidades y becas para decidir tu camino después del colegio.",
+    "ctaBlog": "Leer el blog",
+    "ctaRegister": "Crear cuenta",
+    "latest": "Lo más reciente",
+    "viewAll": "Ver todos los artículos",
+    "categories": "Explora por tema",
+    "emptyTitle": "Aún no hay artículos publicados",
+    "emptyText": "Cuando el administrador publique el primero, aparecerá aquí.",
+    "joinTitle": "Crea una cuenta para comentar",
+    "joinText": "Con tu cuenta puedes participar en los artículos y resolver tus dudas con otros estudiantes."
+  },
+  "blog": {
+    "title": "Blog de orientación",
+    "searchLabel": "Buscar artículos",
+    "searchPlaceholder": "Busca por título o tema",
+    "search": "Buscar",
+    "all": "Todos",
+    "results_one": "{{count}} artículo",
+    "results_other": "{{count}} artículos",
+    "emptyTitle": "No encontramos artículos",
+    "emptyText": "Prueba con otra palabra o quita el filtro de tema.",
+    "clear": "Quitar filtros",
+    "prev": "Anterior",
+    "next": "Siguiente",
+    "page": "Página {{page}} de {{totalPages}}"
+  },
+  "article": {
+    "back": "Volver al blog",
+    "by": "Por {{name}}",
+    "comments": "Comentarios",
+    "noComments": "Todavía no hay comentarios. Escribe el primero.",
+    "commentLabel": "Tu comentario",
+    "commentPlaceholder": "Comparte tu opinión o tu duda",
+    "publish": "Publicar comentario",
+    "publishing": "Publicando…",
+    "delete": "Eliminar",
+    "loginToComment": "Inicia sesión para comentar.",
+    "commentError": "No se pudo publicar el comentario.",
+    "notFoundTitle": "Este artículo no existe",
+    "notFoundText": "Puede que se haya eliminado o que el enlace esté mal escrito."
+  },
+  "auth": {
+    "loginTitle": "Inicia sesión",
+    "registerTitle": "Crea tu cuenta",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "passwordHint": "Mínimo 8 caracteres",
+    "submitLogin": "Iniciar sesión",
+    "submitRegister": "Crear cuenta",
+    "sending": "Enviando…",
+    "noAccount": "¿No tienes cuenta?",
+    "haveAccount": "¿Ya tienes cuenta?",
+    "errorLogin": "No se pudo iniciar sesión. Inténtalo de nuevo.",
+    "errorRegister": "No se pudo crear la cuenta. Inténtalo de nuevo."
+  },
+  "notFound": {
+    "title": "Esta página no existe",
+    "text": "Revisa la dirección o vuelve al inicio.",
+    "home": "Volver al inicio"
+  },
+  "common": {
+    "loading": "Cargando…",
+    "error": "No se pudo cargar la información. Revisa que el servidor esté activo e inténtalo de nuevo.",
+    "retry": "Reintentar"
+  },
+  "footer": {
+    "text": "Proyecto académico de orientación universitaria."
+  }
+}

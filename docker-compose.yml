@@ -1,0 +1,17 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: campus_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: campus
+      POSTGRES_PASSWORD: campus123
+      POSTGRES_DB: campus_virtual
+    ports:
+      # Puerto 5433 en tu PC para no chocar con un PostgreSQL local (5432)
+      - "5433:5432"
+    volumes:
+      - campus_pgdata:/var/lib/postgresql/data
+
+volumes:
+  campus_pgdata:

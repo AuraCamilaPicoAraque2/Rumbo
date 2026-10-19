@@ -1,0 +1,148 @@
+{
+  "nav": {
+    "careers": "Careers",
+    "institutions": "Institutions",
+    "financing": "Funding",
+    "admissions": "Admissions",
+    "library": "Library",
+    "wellbeing": "Wellbeing",
+    "faq": "FAQ",
+    "support": "Support links"
+  },
+  "common": {
+    "all": "All",
+    "allM": "All",
+    "site": "Website",
+    "officialSite": "Official website",
+    "openResource": "Open resource",
+    "disclaimer": "Reference information. Always confirm programs, dates and openings on each institution's official website.",
+    "notVerified": "Not verified yet",
+    "verifiedOn": "Verified on {{date}}",
+    "clear": "Clear filters",
+    "search": "Search"
+  },
+  "level": {
+    "AUXILIAR": "Assistant",
+    "OPERARIO": "Operator",
+    "TECNICO": "Technician",
+    "TECNOLOGO": "Technologist",
+    "PROFUNDIZACION": "Technical deepening",
+    "PROFESIONAL": "Professional"
+  },
+  "status": {
+    "VIGENTE": "Active",
+    "POR_CONFIRMAR": "To be confirmed",
+    "NO_VIGENTE": "Not active"
+  },
+  "modality": {
+    "PRESENCIAL": "On campus",
+    "VIRTUAL": "Online",
+    "HIBRIDA": "Hybrid"
+  },
+  "kind": {
+    "UNIVERSIDAD": "University",
+    "INSTITUCION_UNIVERSITARIA": "University institution",
+    "TECNOLOGICA_TECNICA": "Technical or technological institution",
+    "SENA": "SENA"
+  },
+  "sector": { "public": "Public", "private": "Private" },
+  "finType": {
+    "BECA": "Scholarship",
+    "CREDITO": "Loan",
+    "GRATUIDAD": "Free tuition",
+    "SUBSIDIO": "Subsidy"
+  },
+  "finScope": {
+    "TODAS": "Applies to: all",
+    "PUBLICA": "Applies to: public",
+    "PRIVADA": "Applies to: private"
+  },
+  "resType": {
+    "GUIA": "Guide",
+    "ENLACE": "Link",
+    "HERRAMIENTA": "Tool",
+    "VIDEO": "Video"
+  },
+  "wbCat": {
+    "SALUD": "Health and emotional wellbeing",
+    "APOYO_ECONOMICO": "Financial support",
+    "ACADEMICO": "Academic support",
+    "DEPORTE_CULTURA": "Sports and culture",
+    "INCLUSION": "Inclusion"
+  },
+  "paths": {
+    "title": "Three paths to study",
+    "TECNICO": { "name": "Technician", "text": "Short, hands-on training to start working soon. Offered by SENA, among others." },
+    "TECNOLOGO": { "name": "Technologist", "text": "More time and depth in one field. A middle ground between working soon and studying further." },
+    "PROFESIONAL": { "name": "Professional", "text": "University degrees with broad theoretical foundations, like medicine, law or engineering." }
+  },
+  "areas": { "title": "Explore by field" },
+  "quick": {
+    "title": "Everything you need to decide, in one place",
+    "financing": { "name": "Funding", "text": "Scholarships, Matrícula Cero, ICETEX and more ways to pay for your studies." },
+    "admissions": { "name": "Admissions", "text": "The steps to apply to a university or to SENA." },
+    "library": { "name": "Library", "text": "Official guides and links to compare and prepare." },
+    "wellbeing": { "name": "Wellbeing", "text": "Support that helps you study with peace of mind." }
+  },
+  "careers": {
+    "title": "Careers and where to study them",
+    "subtitle": "See which institutions currently offer each program and what funding options exist.",
+    "searchLabel": "Search careers",
+    "searchPlaceholder": "Search careers…",
+    "area": "Field",
+    "level": "Level",
+    "total_one": "{{count}} program",
+    "total_other": "{{count}} programs",
+    "counts_one": "{{count}} institution · {{vigentes}} currently offering",
+    "counts_other": "{{count}} institutions · {{vigentes}} currently offering",
+    "empty": "We found no programs with those filters."
+  },
+  "career": {
+    "back": "Back to careers",
+    "duration": "Duration",
+    "interests": "Interest profile",
+    "outlook": "Where can you work?",
+    "where": "Where to study it?",
+    "financing": "Funding options",
+    "noOffer": "No institutions are registered for this program yet.",
+    "notFoundTitle": "This program does not exist",
+    "notFoundText": "It may have been deleted, or the link may be misspelled."
+  },
+  "institutions": {
+    "title": "Institutions",
+    "subtitle": "Public and private universities, and SENA.",
+    "filterPublic": "Public",
+    "filterPrivate": "Private",
+    "filterSena": "SENA",
+    "programs_one": "{{count}} program",
+    "programs_other": "{{count}} programs",
+    "empty": "No institutions match that filter."
+  },
+  "financingPage": {
+    "title": "Funding options",
+    "subtitle": "Loans, free tuition, scholarships and subsidies to pay for your studies.",
+    "requirements": "Requirements and dates",
+    "empty": "No options match that filter."
+  },
+  "admissions": {
+    "title": "Admissions",
+    "subtitle": "The route to apply, depending on the path you choose.",
+    "trackUNIVERSIDAD": "University",
+    "trackSENA": "SENA",
+    "datesTitle": "Important dates",
+    "faqLink": "Questions? Read the frequently asked questions"
+  },
+  "library": {
+    "title": "Library",
+    "subtitle": "Reliable guides, links and tools to decide and prepare.",
+    "empty": "No resources of this type."
+  },
+  "wellbeingPage": {
+    "title": "Wellbeing",
+    "subtitle": "Support that institutions usually offer so you can study with peace of mind. It varies by institution."
+  },
+  "faqPage": {
+    "title": "Frequently asked questions",
+    "subtitle": "Quick answers about levels of study, admission and funding."
+  }
+}

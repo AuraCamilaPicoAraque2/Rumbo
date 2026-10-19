@@ -1,0 +1,65 @@
+/* ============================================================================
+   MIS CAMBIOS DE DISEÑO · estilo "negro profundo + amarillo"
+   Colores tomados de tu captura: fondo #121212, tarjetas #171717, amarillo #facc15.
+   Este archivo se carga al final, así que gana sobre el resto de los estilos.
+   Si algo no te gusta, cambia el valor de la variable y guarda.
+   ============================================================================ */
+
+/* ---- Tema oscuro (el que se ve por defecto) ---- */
+:root[data-theme='dark'] {
+  --bg: #121212;          /* fondo de la página y de la cabecera */
+  --surface: #171717;     /* tarjetas, buscador, paneles */
+  --line: #2a2a2a;        /* bordes y líneas */
+  --text: #f3f4f6;        /* texto principal */
+  --muted: #9ca3af;       /* texto secundario */
+  --accent: #facc15;      /* amarillo: botones, enlaces, detalles */
+  --on-accent: #0a0a0a;   /* texto sobre los botones amarillos */
+  --focus: #facc15;       /* contorno al navegar con teclado */
+  --danger-bg: #2b1a1a;   /* fondo de los mensajes de error */
+}
+
+/* ---- Tema claro (botón del sol/luna). El amarillo se oscurece para que se pueda leer ---- */
+:root[data-theme='light'] {
+  --bg: #fafaf7;
+  --surface: #ffffff;
+  --line: #e7e5e0;
+  --text: #171717;
+  --muted: #57534e;
+  --accent: #a16207;
+  --on-accent: #ffffff;
+  --focus: #a16207;
+  --danger-bg: #ffe9e9;
+}
+
+/* ---- Colores pastel: el primero pasa a amarillo para combinar con el acento ---- */
+:root {
+  --p1: #fde68a; /* amarillo suave */
+  --p6: #c9b8ff; /* lavanda (antes era el 1) */
+}
+
+/* ---- Marca: cuadro amarillo con el logo, y el nombre en amarillo ---- */
+.nav__brand { color: var(--accent); }
+.nav__brand svg {
+  width: 38px;
+  height: 38px;
+  padding: 7px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: var(--on-accent);
+}
+.nav__brand img {
+  width: 38px;
+  height: 38px;
+  padding: 7px;
+  border-radius: 12px;
+  background: var(--accent);
+  object-fit: contain;
+}
+.nav__brand svg polygon:last-child { fill: var(--on-accent); }
+
+/* ---- Titulares más contundentes ---- */
+h1 { font-weight: 800; }
+
+/* ---- Caja de pregunta de la portada: botón amarillo más grande ---- */
+.ask { border-radius: 18px; padding: 0.45rem; }
+.ask .btn { padding: 0.75rem 1.5rem; font-weight: 700; }

@@ -1,0 +1,82 @@
+# Pruebas de la API con la extensión "REST Client" de VS Code (humao.rest-client)
+# Haz clic en "Send Request" encima de cada bloque.
+
+@base = http://localhost:4000/api
+
+### 1. Registrar un estudiante
+POST {{base}}/auth/register
+Content-Type: application/json
+
+{ "name": "Ana Pérez", "email": "ana@test.com", "password": "Clave12345" }
+
+### 2. Login como estudiante
+# @name loginEstudiante
+POST {{base}}/auth/login
+Content-Type: application/json
+
+{ "email": "ana@test.com", "password": "Clave12345" }
+
+### 3. Login como administrador (creado por el seed)
+# @name loginAdmin
+POST {{base}}/auth/login
+Content-Type: application/json
+
+{ "email": "admin@campus.test", "password": "Admin123!" }
+
+### 4. Ver mi perfil (estudiante)
+GET {{base}}/auth/me
+Authorization: Bearer {{loginEstudiante.response.body.token}}
+
+### 5. Listar categorías
+GET {{base}}/categories
+
+### 6. Listar artículos (público, con búsqueda y filtro)
+GET {{base}}/articles?page=1&limit=5&q=carrera
+
+### 7. Ver un artículo por slug
+GET {{base}}/articles/como-elegir-tu-carrera
+
+### 8. Crear artículo (solo admin)
+POST {{base}}/articles
+Authorization: Bearer {{loginAdmin.response.body.token}}
+Content-Type: application/json
+
+{
+  "title": "Cinco becas que debes conocer",
+  "excerpt": "Un repaso rápido por becas para estudiar la universidad.",
+  "content": "Aquí va el contenido completo del artículo sobre becas universitarias...",
+  "categoryId": 3,
+  "published": true
+}
+
+### 9. Intentar crear artículo siendo estudiante (debe dar 403)
+POST {{base}}/articles
+Authorization: Bearer {{loginEstudiante.response.body.token}}
+Content-Type: application/json
+
+{ "title": "Prueba", "excerpt": "No debería poder", "content": "Contenido de prueba largo", "categoryId": 1 }
+
+### 10. Editar artículo (admin) - cambia el id
+PUT {{base}}/articles/1
+Authorization: Bearer {{loginAdmin.response.body.token}}
+Content-Type: application/json
+
+{ "title": "Cómo elegir tu carrera universitaria (actualizado)" }
+
+### 11. Comentar un artículo (estudiante)
+POST {{base}}/articles/como-elegir-tu-carrera/comments
+Authorization: Bearer {{loginEstudiante.response.body.token}}
+Content-Type: application/json
+
+{ "content": "¡Muy útil, gracias!" }
+
+### 12. Ver comentarios
+GET {{base}}/articles/como-elegir-tu-carrera/comments
+
+### 13. Eliminar un comentario - cambia el id
+DELETE {{base}}/comments/1
+Authorization: Bearer {{loginEstudiante.response.body.token}}
+
+### 14. Eliminar un artículo (admin) - cambia el id
+DELETE {{base}}/articles/2
+Authorization: Bearer {{loginAdmin.response.body.token}}

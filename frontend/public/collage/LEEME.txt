@@ -1,0 +1,13 @@
+FOTOS DEL COLLAGE DE LA PORTADA
+================================
+Guarda aquí 3 fotos con estos nombres exactos:
+
+  comunidad.jpg   -> foto grande, horizontal (ideal 900 x 700 px o más)
+  estudio.jpg     -> foto vertical o cuadrada (ideal 600 x 800 px)
+  campus.jpg      -> foto horizontal (ideal 800 x 500 px)
+
+Consejos:
+- Que cada archivo pese menos de 300 KB (puedes comprimirlas en squoosh.app o tinypng.com).
+- Si no hay foto, la página muestra una ilustración de color en su lugar.
+- Si tus fotos son .png o .webp, cambia los nombres en src/components/Collage.jsx (constante PHOTOS).
+- Usa fotos propias o de bancos gratuitos con licencia clara (Unsplash, Pexels) y revisa su licencia.

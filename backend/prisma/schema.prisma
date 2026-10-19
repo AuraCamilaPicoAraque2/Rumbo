@@ -1,0 +1,281 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ---------- Enumeraciones ----------
+enum Role {
+  ESTUDIANTE
+  ADMIN
+}
+
+enum Modality {
+  PRESENCIAL
+  VIRTUAL
+  HIBRIDA
+}
+
+// Modelo RIASEC (Holland) para el test vocacional
+enum RiasecType {
+  REALISTA
+  INVESTIGADOR
+  ARTISTICO
+  SOCIAL
+  EMPRENDEDOR
+  CONVENCIONAL
+}
+
+// Niveles de formación (los 5 del SENA + profesional universitario)
+enum Level {
+  AUXILIAR
+  OPERARIO
+  TECNICO
+  TECNOLOGO
+  PROFUNDIZACION
+  PROFESIONAL
+}
+
+enum InstitutionKind {
+  UNIVERSIDAD
+  INSTITUCION_UNIVERSITARIA
+  TECNOLOGICA_TECNICA
+  SENA
+}
+
+enum OfferStatus {
+  VIGENTE
+  POR_CONFIRMAR
+  NO_VIGENTE
+}
+
+enum FinancingType {
+  BECA
+  CREDITO
+  GRATUIDAD
+  SUBSIDIO
+}
+
+enum FinancingScope {
+  TODAS
+  PUBLICA
+  PRIVADA
+}
+
+enum ResourceType {
+  GUIA
+  ENLACE
+  HERRAMIENTA
+  VIDEO
+}
+
+enum WellbeingCategory {
+  SALUD
+  APOYO_ECONOMICO
+  ACADEMICO
+  DEPORTE_CULTURA
+  INCLUSION
+}
+
+// ---------- Usuarios ----------
+model User {
+  id           Int              @id @default(autoincrement())
+  name         String
+  email        String           @unique
+  passwordHash String
+  role         Role             @default(ESTUDIANTE)
+  createdAt    DateTime         @default(now())
+  updatedAt    DateTime         @updatedAt
+  articles     Article[]
+  comments     Comment[]
+  testResults  TestResult[]
+  progress     LessonProgress[]
+}
+
+// ---------- Blog ----------
+model Category {
+  id       Int       @id @default(autoincrement())
+  name     String    @unique
+  slug     String    @unique
+  articles Article[]
+}
+
+model Article {
+  id          Int       @id @default(autoincrement())
+  title       String
+  slug        String    @unique
+  excerpt     String
+  content     String    @db.Text
+  coverUrl    String?
+  published   Boolean   @default(false)
+  publishedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  authorId    Int
+  author      User      @relation(fields: [authorId], references: [id])
+  categoryId  Int
+  category    Category  @relation(fields: [categoryId], references: [id])
+  comments    Comment[]
+}
+
+model Comment {
+  id        Int      @id @default(autoincrement())
+  content   String   @db.Text
+  createdAt DateTime @default(now())
+  userId    Int
+  user      User     @relation(fields: [userId], references: [id])
+  articleId Int
+  article   Article  @relation(fields: [articleId], references: [id], onDelete: Cascade)
+}
+
+// ---------- Carreras, instituciones y oferta ----------
+model Career {
+  id            Int                @id @default(autoincrement())
+  name          String             @unique
+  slug          String             @unique
+  area          String
+  description   String             @db.Text
+  durationYears Int
+  riasecCode    String // Ej: "IAR" (3 letras RIASEC dominantes)
+  level         Level              @default(PROFESIONAL)
+  outlook       String?            @db.Text // Campo laboral
+  durationLabel String? // Ej: "Aprox. 10 semestres (varía según la universidad)"
+  universities  CareerUniversity[]
+
+  @@index([area])
+}
+
+model University {
+  id          Int                @id @default(autoincrement())
+  name        String             @unique
+  city        String
+  website     String?
+  isPublic    Boolean            @default(true)
+  kind        InstitutionKind    @default(UNIVERSIDAD)
+  description String?            @db.Text
+  careers     CareerUniversity[]
+}
+
+model CareerUniversity {
+  careerId     Int
+  universityId Int
+  modality     Modality    @default(PRESENCIAL)
+  offerStatus  OfferStatus @default(POR_CONFIRMAR)
+  verifiedAt   DateTime?
+  programUrl   String?
+  career       Career      @relation(fields: [careerId], references: [id], onDelete: Cascade)
+  university   University  @relation(fields: [universityId], references: [id], onDelete: Cascade)
+
+  @@id([careerId, universityId])
+}
+
+// ---------- Financiación (becas, créditos, gratuidad, subsidios) ----------
+// La tabla se sigue llamando "Scholarship" para no perder datos del paso 1
+model Financing {
+  id           Int            @id @default(autoincrement())
+  name         String
+  entity       String
+  description  String         @db.Text
+  requirements String?        @db.Text
+  deadline     DateTime?
+  url          String?
+  createdAt    DateTime       @default(now())
+  type         FinancingType  @default(BECA)
+  scope        FinancingScope @default(TODAS)
+  sortOrder    Int            @default(0)
+
+  @@map("Scholarship")
+}
+
+// ---------- Admisiones, biblioteca, bienestar y preguntas frecuentes ----------
+model AdmissionStep {
+  id          Int    @id @default(autoincrement())
+  track       String @default("UNIVERSIDAD") // UNIVERSIDAD | SENA
+  order       Int
+  title       String
+  description String @db.Text
+  url         String?
+}
+
+model ImportantDate {
+  id          Int    @id @default(autoincrement())
+  title       String
+  whenLabel   String // Texto libre: "Finales de noviembre", "Según calendario del colegio"...
+  description String @db.Text
+  url         String?
+  sortOrder   Int    @default(0)
+}
+
+model Resource {
+  id          Int          @id @default(autoincrement())
+  title       String
+  description String       @db.Text
+  url         String?
+  type        ResourceType @default(ENLACE)
+  category    String
+  createdAt   DateTime     @default(now())
+}
+
+model WellbeingService {
+  id          Int               @id @default(autoincrement())
+  title       String
+  description String            @db.Text
+  category    WellbeingCategory
+  url         String?
+}
+
+model Faq {
+  id        Int    @id @default(autoincrement())
+  question  String
+  answer    String @db.Text
+  category  String
+  sortOrder Int    @default(0)
+}
+
+// ---------- Test vocacional ----------
+model Question {
+  id        Int        @id @default(autoincrement())
+  text      String
+  dimension RiasecType
+}
+
+model TestResult {
+  id        Int      @id @default(autoincrement())
+  scores    Json // Ej: { "REALISTA": 3, "INVESTIGADOR": 5, ... }
+  topCode   String // Ej: "IAS"
+  createdAt DateTime @default(now())
+  userId    Int
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+// ---------- Mini campus ----------
+model Module {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  order       Int
+  lessons     Lesson[]
+}
+
+model Lesson {
+  id       Int              @id @default(autoincrement())
+  title    String
+  content  String           @db.Text
+  order    Int
+  moduleId Int
+  module   Module           @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+  progress LessonProgress[]
+}
+
+model LessonProgress {
+  userId      Int
+  lessonId    Int
+  completedAt DateTime @default(now())
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lesson      Lesson   @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+
+  @@id([userId, lessonId])
+}

@@ -1,0 +1,68 @@
+{
+  "nav": {
+    "test": "Test vocacional",
+    "admin": "Panel"
+  },
+  "test": {
+    "title": "Test vocacional",
+    "intro": "Responde con sinceridad qué tanto te identifica cada frase. No hay respuestas buenas ni malas: al final verás tu perfil de intereses y carreras que podrían encajar contigo.",
+    "duration": "Son {{count}} preguntas y toma unos 5 minutos.",
+    "start": "Comenzar el test",
+    "question": "Pregunta {{current}} de {{total}}",
+    "back": "Anterior",
+    "scale": {
+      "1": "Nada",
+      "2": "Poco",
+      "3": "Más o menos",
+      "4": "Bastante",
+      "5": "Totalmente"
+    },
+    "calculating": "Calculando tu resultado…",
+    "resultTitle": "Tu perfil de intereses",
+    "topCode": "Tus tres intereses principales",
+    "matchesTitle": "Carreras que podrían encajar contigo",
+    "affinity": "{{percent}}% de afinidad",
+    "noMatches": "No encontramos coincidencias claras. Prueba respondiendo con más variedad.",
+    "saved": "Tu resultado quedó guardado en tu cuenta.",
+    "loginToSave": "Inicia sesión para guardar tu resultado.",
+    "retry": "Repetir el test",
+    "error": "No se pudo calcular el resultado. Inténtalo de nuevo.",
+    "note": "Este test es una guía orientativa, no un diagnóstico. Úsalo como punto de partida y compáralo con lo que de verdad te gusta."
+  },
+  "advisor": {
+    "open": "Pregunta al orientador",
+    "title": "Orientador",
+    "close": "Cerrar",
+    "greeting": "Hola, soy el orientador del sitio. Cuéntame qué te gusta hacer, en qué eres bueno o qué te imaginas haciendo, y te sugiero carreras.",
+    "placeholder": "Escribe qué te gusta o qué te imaginas haciendo",
+    "send": "Enviar",
+    "thinking": "Pensando…",
+    "error": "No pude responder ahora. Revisa tu conexión e inténtalo de nuevo.",
+    "note": "Respondo en español con reglas simples, no con IA. Úsame como punto de partida.",
+    "heroPlaceholder": "Ej: me gusta dibujar y la tecnología",
+    "ask": "Preguntar",
+    "match": "{{percent}}% afín",
+    "s1": "Me gusta ayudar a las personas",
+    "s2": "Soy bueno en matemáticas",
+    "s3": "Soy creativo",
+    "s4": "Quiero emprender"
+  },
+  "admin": {
+    "forbidden": "Esta sección es solo para administradores."
+  },
+  "home": {
+    "hexTitle": "Seis tipos de interés, un solo perfil",
+    "hexText": "Tus gustos suelen combinarse. El test vocacional mide cuánto te identificas con cada tipo y te sugiere carreras que encajan con esa mezcla.",
+    "hexCta": "Hacer el test"
+  },
+  "collage": {
+    "community": "Comunidad",
+    "campus": "Campus",
+    "altA": "Estudiantes compartiendo en comunidad",
+    "altB": "Estudiante trabajando con tecnología",
+    "altC": "Vida en el campus",
+    "statTitle": "+{{count}} programas",
+    "statText": "Carreras técnicas, tecnológicas y profesionales con su oferta y financiación",
+    "statFallback": "Carreras, instituciones y financiación en un solo lugar"
+  }
+}

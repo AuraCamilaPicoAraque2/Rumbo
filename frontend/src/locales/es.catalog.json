@@ -1,0 +1,148 @@
+{
+  "nav": {
+    "careers": "Carreras",
+    "institutions": "Instituciones",
+    "financing": "Financiación",
+    "admissions": "Admisiones",
+    "library": "Biblioteca",
+    "wellbeing": "Bienestar",
+    "faq": "Preguntas",
+    "support": "Enlaces de apoyo"
+  },
+  "common": {
+    "all": "Todas",
+    "allM": "Todos",
+    "site": "Sitio",
+    "officialSite": "Sitio oficial",
+    "openResource": "Abrir recurso",
+    "disclaimer": "Información de referencia. Confirma siempre programas, fechas y cupos en el sitio oficial de cada institución.",
+    "notVerified": "Sin fecha de verificación",
+    "verifiedOn": "Verificado el {{date}}",
+    "clear": "Quitar filtros",
+    "search": "Buscar"
+  },
+  "level": {
+    "AUXILIAR": "Auxiliar",
+    "OPERARIO": "Operario",
+    "TECNICO": "Técnico",
+    "TECNOLOGO": "Tecnólogo",
+    "PROFUNDIZACION": "Profundización técnica",
+    "PROFESIONAL": "Profesional"
+  },
+  "status": {
+    "VIGENTE": "Vigente",
+    "POR_CONFIRMAR": "Por confirmar",
+    "NO_VIGENTE": "No vigente"
+  },
+  "modality": {
+    "PRESENCIAL": "Presencial",
+    "VIRTUAL": "Virtual",
+    "HIBRIDA": "Híbrida"
+  },
+  "kind": {
+    "UNIVERSIDAD": "Universidad",
+    "INSTITUCION_UNIVERSITARIA": "Institución universitaria",
+    "TECNOLOGICA_TECNICA": "Institución técnica o tecnológica",
+    "SENA": "SENA"
+  },
+  "sector": { "public": "Pública", "private": "Privada" },
+  "finType": {
+    "BECA": "Beca",
+    "CREDITO": "Crédito",
+    "GRATUIDAD": "Gratuidad",
+    "SUBSIDIO": "Subsidio"
+  },
+  "finScope": {
+    "TODAS": "Aplica a: todas",
+    "PUBLICA": "Aplica a: públicas",
+    "PRIVADA": "Aplica a: privadas"
+  },
+  "resType": {
+    "GUIA": "Guía",
+    "ENLACE": "Enlace",
+    "HERRAMIENTA": "Herramienta",
+    "VIDEO": "Video"
+  },
+  "wbCat": {
+    "SALUD": "Salud y bienestar emocional",
+    "APOYO_ECONOMICO": "Apoyo económico",
+    "ACADEMICO": "Apoyo académico",
+    "DEPORTE_CULTURA": "Deporte y cultura",
+    "INCLUSION": "Inclusión"
+  },
+  "paths": {
+    "title": "Tres caminos para estudiar",
+    "TECNICO": { "name": "Técnico", "text": "Formación corta y práctica para empezar a trabajar pronto. La ofrece, entre otros, el SENA." },
+    "TECNOLOGO": { "name": "Tecnólogo", "text": "Más tiempo y más profundidad en un área. Un punto medio entre trabajar pronto y seguir estudiando." },
+    "PROFESIONAL": { "name": "Profesional", "text": "Carreras universitarias con bases teóricas amplias, como medicina, derecho o ingeniería." }
+  },
+  "areas": { "title": "Explora por área" },
+  "quick": {
+    "title": "Todo para decidir en un solo lugar",
+    "financing": { "name": "Financiación", "text": "Becas, Matrícula Cero, ICETEX y más opciones para pagar tu carrera." },
+    "admissions": { "name": "Admisiones", "text": "Los pasos para inscribirte a una universidad o al SENA." },
+    "library": { "name": "Biblioteca", "text": "Guías y enlaces oficiales para comparar y prepararte." },
+    "wellbeing": { "name": "Bienestar", "text": "Apoyos que ayudan a estudiar con tranquilidad." }
+  },
+  "careers": {
+    "title": "Carreras y dónde estudiarlas",
+    "subtitle": "Mira en qué instituciones está vigente cada programa y qué opciones de financiación existen.",
+    "searchLabel": "Buscar carrera",
+    "searchPlaceholder": "Buscar carrera…",
+    "area": "Área",
+    "level": "Nivel",
+    "total_one": "{{count}} programa",
+    "total_other": "{{count}} programas",
+    "counts_one": "{{count}} institución · {{vigentes}} con oferta vigente",
+    "counts_other": "{{count}} instituciones · {{vigentes}} con oferta vigente",
+    "empty": "No encontramos programas con esos filtros."
+  },
+  "career": {
+    "back": "Volver a carreras",
+    "duration": "Duración",
+    "interests": "Perfil de intereses",
+    "outlook": "¿En qué puedes trabajar?",
+    "where": "¿Dónde estudiarla?",
+    "financing": "Opciones de financiación",
+    "noOffer": "Todavía no hay instituciones registradas para este programa.",
+    "notFoundTitle": "Este programa no existe",
+    "notFoundText": "Puede que se haya eliminado o que el enlace esté mal escrito."
+  },
+  "institutions": {
+    "title": "Instituciones",
+    "subtitle": "Universidades públicas y privadas, y el SENA.",
+    "filterPublic": "Públicas",
+    "filterPrivate": "Privadas",
+    "filterSena": "SENA",
+    "programs_one": "{{count}} programa",
+    "programs_other": "{{count}} programas",
+    "empty": "No hay instituciones con ese filtro."
+  },
+  "financingPage": {
+    "title": "Opciones de financiación",
+    "subtitle": "Créditos, gratuidad, becas y subsidios para pagar tu carrera.",
+    "requirements": "Requisitos y fechas",
+    "empty": "No hay opciones con ese filtro."
+  },
+  "admissions": {
+    "title": "Admisiones",
+    "subtitle": "La ruta para inscribirte, según el camino que elijas.",
+    "trackUNIVERSIDAD": "Universidad",
+    "trackSENA": "SENA",
+    "datesTitle": "Fechas importantes",
+    "faqLink": "¿Tienes dudas? Mira las preguntas frecuentes"
+  },
+  "library": {
+    "title": "Biblioteca",
+    "subtitle": "Guías, enlaces y herramientas confiables para decidir y prepararte.",
+    "empty": "No hay recursos de este tipo."
+  },
+  "wellbeingPage": {
+    "title": "Bienestar",
+    "subtitle": "Apoyos que suelen ofrecer las instituciones para que estudies con tranquilidad. Varían según cada una."
+  },
+  "faqPage": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Respuestas rápidas sobre niveles de formación, admisión y financiación."
+  }
+}

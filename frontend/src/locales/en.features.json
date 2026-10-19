@@ -1,0 +1,68 @@
+{
+  "nav": {
+    "test": "Career test",
+    "admin": "Dashboard"
+  },
+  "test": {
+    "title": "Career test",
+    "intro": "Answer honestly how much each sentence describes you. There are no right or wrong answers: at the end you will see your interest profile and careers that could fit you.",
+    "duration": "{{count}} questions, about 5 minutes.",
+    "start": "Start the test",
+    "question": "Question {{current}} of {{total}}",
+    "back": "Previous",
+    "scale": {
+      "1": "Not at all",
+      "2": "A little",
+      "3": "So-so",
+      "4": "Quite a lot",
+      "5": "Totally"
+    },
+    "calculating": "Calculating your result…",
+    "resultTitle": "Your interest profile",
+    "topCode": "Your three main interests",
+    "matchesTitle": "Careers that could fit you",
+    "affinity": "{{percent}}% match",
+    "noMatches": "We found no clear matches. Try answering with more variety.",
+    "saved": "Your result was saved to your account.",
+    "loginToSave": "Log in to save your result.",
+    "retry": "Retake the test",
+    "error": "Your result could not be calculated. Please try again.",
+    "note": "This test is a guide, not a diagnosis. Use it as a starting point and compare it with what you truly enjoy."
+  },
+  "advisor": {
+    "open": "Ask the advisor",
+    "title": "Advisor",
+    "close": "Close",
+    "greeting": "Hi, I'm the site's advisor. Tell me what you like to do, what you are good at or what you imagine yourself doing, and I will suggest careers.",
+    "placeholder": "Write what you like or what you imagine doing",
+    "send": "Send",
+    "thinking": "Thinking…",
+    "error": "I could not answer right now. Check your connection and try again.",
+    "note": "I reply in Spanish using simple rules, not AI. Use me as a starting point.",
+    "heroPlaceholder": "E.g. I like drawing and technology",
+    "ask": "Ask",
+    "match": "{{percent}}% match",
+    "s1": "I like helping people",
+    "s2": "I'm good at math",
+    "s3": "I'm creative",
+    "s4": "I want to start a business"
+  },
+  "admin": {
+    "forbidden": "This section is for administrators only."
+  },
+  "home": {
+    "hexTitle": "Six interest types, one profile",
+    "hexText": "Your interests usually blend together. The career test measures how much you identify with each type and suggests careers that fit that mix.",
+    "hexCta": "Take the test"
+  },
+  "collage": {
+    "community": "Community",
+    "campus": "Campus",
+    "altA": "Students sharing in community",
+    "altB": "Student working with technology",
+    "altC": "Life on campus",
+    "statTitle": "+{{count}} programs",
+    "statText": "Technical, technological and professional programs with their offering and funding",
+    "statFallback": "Careers, institutions and funding in one place"
+  }
+}
